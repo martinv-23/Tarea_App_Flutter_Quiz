@@ -42,8 +42,8 @@ class QuestionsSummary extends StatelessWidget {
                     children: [
                       Text(
                         data['question'] as String,
-                        style: GoogleFonts.lato(
-                          color: const Color.fromARGB(255, 255, 255, 255),
+                        style: GoogleFonts.orbitron(
+                          color: Colors.pinkAccent,
                           fontSize: 16,
                         ),
                       ),
