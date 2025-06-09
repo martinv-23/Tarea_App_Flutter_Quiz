@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class OutlinedButtonExample extends StatefulWidget {
   const OutlinedButtonExample(this.text, this.action, this.selectedIcon, {super.key});
-  
+
   final void Function() action;
   final String text;
   final Icon selectedIcon;
@@ -14,20 +15,23 @@ class OutlinedButtonExample extends StatefulWidget {
 class _OutlinedButtonExampleState extends State<OutlinedButtonExample> {
   @override
   Widget build(BuildContext context) {
-    final ButtonStyle style = OutlinedButton.styleFrom(
-        textStyle: const TextStyle(fontSize: 17),
-        shape: const BeveledRectangleBorder(),
-        side: const BorderSide(width: 0.1, color: Color.fromARGB(255, 197, 197, 197)),
-        foregroundColor: Colors.white);
-
     return Center(
       child: Column(
         children: <Widget>[
           OutlinedButton.icon(
-            style: style,
             onPressed: widget.action,
-            label: Text(widget.text),
+            style: OutlinedButton.styleFrom(
+              backgroundColor: Colors.transparent,
+              side: const BorderSide(width: 2, color: Color(0xFFFC03A1)),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+              foregroundColor: Colors.white,
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+            ),
             icon: widget.selectedIcon,
+            label: Text(
+              widget.text,
+              style: GoogleFonts.bebasNeue(fontSize: 22),
+            ),
           ),
         ],
       ),
