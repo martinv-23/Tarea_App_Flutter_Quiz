@@ -53,6 +53,9 @@ A continuación se muestran comparaciones visuales del diseño **antes** y **des
 |---------|---------|---------|
 | ![Después 1](screenshots/despues1.jpeg) | ![Después 2](screenshots/despues2.jpeg) | ![Después 3](screenshots/despues3.jpeg) |
 
-> 📌 Coloca tus capturas de pantalla en una carpeta llamada `screenshots/` dentro del directorio raíz del proyecto.
+## 📦 4. Instalar dependencias
 
----
+Antes de ejecutar la app, asegúrate de instalar todas las dependencias necesarias:
+
+```bash
+flutter pub get
